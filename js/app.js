@@ -1,6 +1,6 @@
 /**
  * Siya Fitness Gym - Core Interactive Application
- * Powers interactive muscle guide, live timetable, VIP pass generator,
+ * Powers interactive muscle guide, live timetable, body engine,
  * transformation slider, particle physics, and Kitwe live clock.
  */
 
@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initTransformationSlider();
     initPricingSwitcher();
     initCalculatorUI();
-    initPassModal();
     initAudioToggle();
     initMobileNav();
     initScrollAnimations();
@@ -559,98 +558,15 @@ function initCalculatorUI() {
         if (emptyState) emptyState.style.display = 'none';
         resultsPanel.style.display = 'block';
 
-        // Play feedback
+        // Play feedback & celebrate
         if (window.soundEngine) window.soundEngine.playSuccess();
+        triggerConfetti();
 
         // Scroll to results on mobile
         if (window.innerWidth < 768) {
             resultsPanel.scrollIntoView({ behavior: 'smooth' });
         }
     });
-}
-
-/* ==========================================================================
-   8. VIP Digital Pass Modal Generator (Lead Magnet)
-   ========================================================================== */
-function initPassModal() {
-    const modal = document.getElementById('pass-modal');
-    const openBtns = document.querySelectorAll('.open-pass-modal-btn');
-    const closeBtn = document.getElementById('close-pass-modal');
-    const passForm = document.getElementById('pass-gen-form');
-    const passFormView = document.getElementById('pass-form-view');
-    const passResultView = document.getElementById('pass-result-view');
-    if (!modal) return;
-
-    function openModal() {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        if (window.soundEngine) window.soundEngine.playPowerUp();
-    }
-
-    function closeModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-        if (window.soundEngine) window.soundEngine.playClick();
-    }
-
-    openBtns.forEach(btn => btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-    }));
-
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-    });
-
-    if (passForm) {
-        passForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('pass-name').value.trim() || 'Valued Athlete';
-            const phone = document.getElementById('pass-phone').value.trim() || '+260 96 9919764';
-            const goal = document.getElementById('pass-goal').value;
-
-            // Generate Random Pass Code
-            const randomCode = 'SIYA-VIP-' + Math.floor(1000 + Math.random() * 9000);
-            const now = new Date();
-            const dateStr = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-
-            document.getElementById('ticket-name').textContent = name;
-            document.getElementById('ticket-code').textContent = randomCode;
-            document.getElementById('ticket-date').textContent = dateStr;
-            document.getElementById('ticket-goal').textContent = goal.toUpperCase();
-
-            // Setup WhatsApp claim link
-            const waText = `Hello Siya Fitness Gym Kitwe! 👋%0A%0AI just generated my Official VIP 1-Day Pass on your website:%0A` +
-                `🎫 *Pass Code:* ${randomCode}%0A` +
-                `👤 *Name:* ${encodeURIComponent(name)}%0A` +
-                `📱 *Phone:* ${encodeURIComponent(phone)}%0A` +
-                `🎯 *Training Focus:* ${encodeURIComponent(goal)}%0A%0A` +
-                `I am planning to visit your gym on Kanwe Avenue in Kitwe to redeem this pass!`;
-
-            const claimBtn = document.getElementById('ticket-whatsapp-claim');
-            if (claimBtn) {
-                claimBtn.href = `https://wa.me/260969919764?text=${waText}`;
-            }
-
-            passFormView.style.display = 'none';
-            passResultView.style.display = 'block';
-
-            // Confetti effect
-            triggerConfetti();
-
-            if (window.soundEngine) window.soundEngine.playSuccess();
-        });
-    }
-
-    // Reset button
-    const resetBtn = document.getElementById('pass-reset-btn');
-    if (resetBtn) {
-        resetBtn.addEventListener('click', () => {
-            passFormView.style.display = 'block';
-            passResultView.style.display = 'none';
-        });
-    }
 }
 
 // Lightweight Confetti Trigger

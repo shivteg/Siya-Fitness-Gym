@@ -4,7 +4,7 @@
 
 A world-class, ultra-modern, interactive web platform for **Siya Fitness Gym**, located on **Kanwe Avenue, Chimwemwe, Kitwe, Zambia**.
 
-Built with an aggressive cyber-athletic aesthetic, real-time interactive calculations, anatomical muscle visualizer, live class booking, digital holographic VIP day pass generator, and ambient synthesized sound effects.
+Built with an aggressive cyber-athletic aesthetic, real-time interactive calculations, anatomical muscle visualizer, live class booking, member transformation slider, and ambient synthesized sound effects.
 
 ---
 
@@ -19,28 +19,24 @@ Built with an aggressive cyber-athletic aesthetic, real-time interactive calcula
 - Formats exact daily macronutrient splits (**Protein, Carbohydrates, Fats, Water in Litres**).
 - Produces a customized **7-Day Training Split** tailored for Siya Gym with one-tap WhatsApp sharing directly to the coaching staff.
 
-### 3. 🎫 Holographic Digital VIP Day Pass Generator
-- Generates a personalized digital holographic guest pass with a live security countdown timer, unique serial number (`SIYA-VIP-XXXX`), and barcode.
-- Triggers celebratory confetti effects and generates an instant WhatsApp claim message for redemption at the Kanwe Avenue front desk.
-
-### 4. 🔄 Interactive Transformation Comparison Slider
+### 3. 🔄 Interactive Transformation Comparison Slider
 - Interactive touch and drag slider revealing real before-and-after metamorphosis metrics from Kitwe gym members.
 
-### 5. 📅 High-Voltage Weekly Class Timetable
+### 4. 📅 High-Voltage Weekly Class Timetable
 - Filter classes by day (*Monday through Saturday*).
 - Live metrics showing session start times, certified instructor details, room zone, and real-time spot vacancy indicators with direct reservation hooks.
 
-### 6. 🕒 Kitwe Real-Time Central Africa Time (CAT) Clock & Status
+### 5. 🕒 Kitwe Real-Time Central Africa Time (CAT) Clock & Status
 - Dynamically calculates whether the gym floor is **OPEN** or **CLOSED** in Central Africa Time (CAT, UTC+2) based on daily operating schedules:
   - **Mon – Fri:** 05:30 AM – 21:00 PM
   - **Saturday:** 06:00 AM – 19:00 PM
   - **Sunday:** 08:00 AM – 14:00 PM
 
-### 7. 🔊 Synthesized Web Audio FX Engine
+### 6. 🔊 Synthesized Web Audio FX Engine
 - Pure synthesized sound effects via HTML5 Web Audio API (*Power-ups, clicks, rewards*).
 - Zero external MP3 files required; respects browser autoplay restrictions and includes a prominent mute/unmute toggle.
 
-### 8. ✨ Floating Ember Particle Canvas
+### 7. ✨ Floating Ember Particle Canvas
 - Interactive canvas physics with mouse repulsion and floating golden sparks representing the fiery gym atmosphere.
 
 ---
@@ -59,7 +55,7 @@ Built with an aggressive cyber-athletic aesthetic, real-time interactive calcula
 - **HTML5 Semantic Architecture** with OpenGraph metadata and SEO optimization
 - **Custom CSS3** featuring CSS variables, cyber glassmorphism, responsive CSS Grid, and GPU-accelerated keyframe animations
 - **Modular Vanilla JavaScript**:
-  - `js/app.js`: Master application controller, modal manager, particle physics, and DOM renderer
+  - `js/app.js`: Master application controller, interactive components, particle physics, and DOM renderer
   - `js/calculator.js`: Scientific nutrition, BMR, TDEE, and macro calculator
   - `js/audio.js`: Synthesized Web Audio API sound effects generator
 - **Google Fonts**: *Syne* & *Inter*

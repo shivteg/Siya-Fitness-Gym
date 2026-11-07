@@ -10,7 +10,7 @@
     <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Siya Fitness Gym | Kitwe's Premier Gym & Strength Center">
-    <meta property="og:description" content="Take your next step. Premium machinery, elite trainers, and 24/7 fitness community in Kitwe, Zambia. Claim your 1-Day Free VIP Pass now.">
+    <meta property="og:description" content="Take your next step. Premium machinery, elite trainers, and 24/7 fitness community in Kitwe, Zambia. Join Siya Fitness Gym today.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80">
 
     <!-- Google Fonts -->
@@ -74,9 +74,9 @@
 
             <!-- Header Action CTA -->
             <div class="header-actions">
-                <button class="btn btn-primary btn-sm open-pass-modal-btn">
-                    <i class="fas fa-bolt"></i> Free 1-Day Pass
-                </button>
+                <a href="#memberships" class="btn btn-primary btn-sm">
+                    <i class="fas fa-bolt"></i> Join Now
+                </a>
                 <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle Menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -92,9 +92,9 @@
             <a href="#transformations" class="mobile-nav-link">Member Transformations <i class="fas fa-chevron-right"></i></a>
             <a href="#memberships" class="mobile-nav-link">Pricing & Memberships <i class="fas fa-chevron-right"></i></a>
             <a href="#location" class="mobile-nav-link">Contact & Directions <i class="fas fa-chevron-right"></i></a>
-            <button class="btn btn-primary open-pass-modal-btn" style="width: 100%; margin-top: 10px;">
-                <i class="fas fa-bolt"></i> Claim Free 1-Day Pass
-            </button>
+            <a href="#memberships" class="btn btn-primary mobile-nav-link" style="width: 100%; margin-top: 10px; text-align: center; justify-content: center;">
+                <i class="fas fa-bolt"></i> Join Now
+            </a>
         </div>
     </header>
 
@@ -122,9 +122,9 @@
                     </p>
 
                     <div class="hero-cta-group">
-                        <button class="btn btn-primary open-pass-modal-btn">
-                            <i class="fas fa-ticket-alt"></i> Claim 1-Day Free Pass
-                        </button>
+                        <a href="#memberships" class="btn btn-primary">
+                            <i class="fas fa-bolt"></i> View Memberships
+                        </a>
                         <a href="https://wa.me/260969919764?text=Hello%20Siya%20Fitness%20Gym%2C%20I%20am%20ready%20to%20start%20my%20fitness%20journey%20in%20Kitwe." 
                            target="_blank" rel="noopener" class="btn btn-whatsapp">
                             <i class="fab fa-whatsapp"></i> WhatsApp Enquiry
@@ -522,9 +522,9 @@
                             </div>
                         </div>
                         <div style="margin-top: 28px;">
-                            <button class="btn btn-primary btn-sm open-pass-modal-btn">
+                            <a href="#memberships" class="btn btn-primary btn-sm">
                                 <i class="fas fa-bolt"></i> Start Your Transformation
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -618,7 +618,7 @@
                         <ul class="plan-features">
                             <li><i class="fas fa-check"></i> <strong>Unlimited Access to ALL Group Classes</strong></li>
                             <li><i class="fas fa-check"></i> Full Floor, Free Weights & Boxing Arena</li>
-                            <li><i class="fas fa-check"></i> 1 Free Monthly Guest Pass for a Friend</li>
+                            <li><i class="fas fa-check"></i> 1 Monthly Guest Pass for a Friend</li>
                             <li><i class="fas fa-check"></i> 15% Discount at Recovery Shake Bar</li>
                             <li><i class="fas fa-check"></i> Free Body Composition Scan Every Month</li>
                             <li><i class="fas fa-check"></i> Priority Locker Room & Towel Service</li>
@@ -839,10 +839,10 @@
 
                     <details style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 20px;">
                         <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer; color: var(--text-white);">
-                            How can I claim my free 1-Day VIP Pass?
+                            Can I purchase a Single Day Pass to try out the gym?
                         </summary>
                         <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6;">
-                            Simply click the "Free 1-Day Pass" button on this website, enter your name, and a unique holographic digital pass will be generated for you to present at our front desk!
+                            Yes! We offer a Single Day Pass for K80. You can drop in directly at our Kanwe Avenue location or message us via WhatsApp to arrange your visit.
                         </p>
                     </details>
                 </div>
@@ -851,106 +851,12 @@
     </main>
 
     <!-- ==========================================================================
-         VIP Holographic Digital Pass Generator Modal
-         ========================================================================== -->
-    <div id="pass-modal" class="pass-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="pass-modal-card">
-            <button id="close-pass-modal" class="close-modal-btn" aria-label="Close modal">
-                <i class="fas fa-times"></i>
-            </button>
-
-            <!-- View 1: Form Generator -->
-            <div id="pass-form-view">
-                <span class="section-eyebrow"><i class="fas fa-crown"></i> Exclusive Guest Access</span>
-                <h3 id="modal-title" style="font-size: 1.7rem; margin-bottom: 8px;">CLAIM YOUR <span class="gradient-gold">1-DAY VIP PASS</span></h3>
-                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 24px;">
-                    Test drive Kitwe’s top strength facility for 24 hours. Full access to heavy weights, cardio, and lockers.
-                </p>
-
-                <form id="pass-gen-form" style="display: flex; flex-direction: column; gap: 16px;">
-                    <div class="form-group">
-                        <label for="pass-name">Full Name</label>
-                        <input type="text" id="pass-name" class="form-control" placeholder="e.g. Chileshe Mwamba" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="pass-phone">WhatsApp Number</label>
-                        <input type="tel" id="pass-phone" class="form-control" placeholder="e.g. +260 96 991 9764" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="pass-goal">Primary Goal</label>
-                        <select id="pass-goal" class="form-control">
-                            <option value="Rapid Fat Loss & Conditioning">Rapid Fat Loss & Conditioning</option>
-                            <option value="Muscle Hypertrophy & Bulk">Muscle Hypertrophy & Bulk</option>
-                            <option value="Powerlifting & Compound Lifts">Powerlifting & Compound Lifts</option>
-                            <option value="Boxing & Combat Training">Boxing & Combat Training</option>
-                            <option value="General Health & Vitality">General Health & Vitality</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%;">
-                        <i class="fas fa-qrcode"></i> Generate My VIP Pass
-                    </button>
-                </form>
-            </div>
-
-            <!-- View 2: Generated Holographic Pass -->
-            <div id="pass-result-view" class="digital-ticket-view">
-                <span class="section-eyebrow"><i class="fas fa-check-circle"></i> Pass Activated</span>
-                <h3 style="font-size: 1.6rem; margin-bottom: 4px;">YOUR VIP PASS IS READY!</h3>
-                <p style="color: var(--text-muted); font-size: 0.88rem;">Show this pass on your phone to our receptionist at Kanwe Avenue.</p>
-
-                <div class="hologram-ticket">
-                    <div class="ticket-header">
-                        <div class="ticket-brand">SIYA FITNESS GYM</div>
-                        <div class="ticket-badge">1-DAY VIP PASS</div>
-                    </div>
-
-                    <div class="ticket-body-grid">
-                        <div>
-                            <div class="t-field-label">Guest Athlete</div>
-                            <div class="t-field-val" id="ticket-name">Chileshe Mwamba</div>
-                        </div>
-                        <div>
-                            <div class="t-field-label">Valid Location</div>
-                            <div class="t-field-val">Kitwe, Zambia</div>
-                        </div>
-                        <div>
-                            <div class="t-field-label">Issue Date</div>
-                            <div class="t-field-val" id="ticket-date">Today</div>
-                        </div>
-                        <div>
-                            <div class="t-field-label">Target Focus</div>
-                            <div class="t-field-val" id="ticket-goal">HYPERTROPHY</div>
-                        </div>
-                    </div>
-
-                    <div class="ticket-barcode-wrap">
-                        <div class="barcode-lines">||| | | |||| | ||| | || |||</div>
-                        <div class="ticket-code-tag" id="ticket-code">SIYA-VIP-8492</div>
-                    </div>
-                </div>
-
-                <div style="display: flex; gap: 12px; flex-direction: column;">
-                    <a href="#" id="ticket-whatsapp-claim" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Confirm Pass via WhatsApp
-                    </a>
-                    <button type="button" id="pass-reset-btn" class="btn btn-outline btn-sm">
-                        Generate Another Pass
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==========================================================================
          Mobile Sticky Bottom Action Bar
          ========================================================================== -->
     <div class="mobile-bottom-bar" aria-label="Quick Actions">
-        <button class="btn btn-primary btn-sm open-pass-modal-btn">
-            <i class="fas fa-ticket-alt"></i> Free Pass
-        </button>
+        <a href="#memberships" class="btn btn-primary btn-sm">
+            <i class="fas fa-bolt"></i> Join Now
+        </a>
         <a href="https://wa.me/260969919764?text=Hello%20Siya%20Fitness%20Gym%2C%20I%20would%20like%20to%20enquire%20about%20visiting." 
            target="_blank" class="btn btn-whatsapp btn-sm">
             <i class="fab fa-whatsapp"></i> WhatsApp
