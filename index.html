@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siya Fitness Gym | Kitwe's Premier Gym & Strength Center</title>
+    <meta name="description" content="Experience Siya Fitness Gym in Kitwe, Zambia. Heavy Olympic iron, high-intensity cardio, combat boxing, expert trainers, and science-backed transformation programs on Kanwe Avenue.">
+    <meta name="keywords" content="Siya Fitness Gym, Gym in Kitwe, Kitwe fitness, Zambia gym, Kanwe Avenue gym, personal training Kitwe, bodybuilding Copperbelt">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Siya Fitness Gym | Kitwe's Premier Gym & Strength Center">
+    <meta property="og:description" content="Take your next step. Premium machinery, elite trainers, and 24/7 fitness community in Kitwe, Zambia. Claim your 1-Day Free VIP Pass now.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Canvas Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Top Announcement & Live Time Bar -->
+    <div class="top-notice-bar">
+        <div class="container top-notice-content">
+            <div class="top-left-status">
+                <span id="gym-status-badge" class="status-badge open">
+                    <span class="pulse-dot"></span> OPEN NOW · Closes 21:00
+                </span>
+                <span style="margin: 0 10px; opacity: 0.3;">|</span>
+                <span><i class="fas fa-map-marker-alt" style="color: var(--accent-gold);"></i> 6694+PH9, Kanwe Ave, Chimwemwe, Kitwe</span>
+            </div>
+            <div class="top-right-meta">
+                <span><i class="far fa-clock"></i> Kitwe Time: <strong id="kitwe-clock">--:-- CAT</strong></span>
+                <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle interactive gym sound effects">
+                    <i class="fas fa-volume-mute"></i> <span>AUDIO: OFF</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Site Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#home" class="site-brand">
+                <div class="brand-icon-box">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">SIYA FITNESS</span>
+                    <span class="brand-sub">GYM · KITWE, ZAMBIA</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="main-nav" aria-label="Main Navigation">
+                <a href="#zones" class="nav-link">Floor Zones</a>
+                <a href="#muscle-guide" class="nav-link">Muscle Guide</a>
+                <a href="#body-calculator" class="nav-link">Body Engine</a>
+                <a href="#timetable" class="nav-link">Timetable</a>
+                <a href="#transformations" class="nav-link">Results</a>
+                <a href="#memberships" class="nav-link">Memberships</a>
+                <a href="#location" class="nav-link">Find Us</a>
+            </nav>
+
+            <!-- Header Action CTA -->
+            <div class="header-actions">
+                <button class="btn btn-primary btn-sm open-pass-modal-btn">
+                    <i class="fas fa-bolt"></i> Free 1-Day Pass
+                </button>
+                <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+            <a href="#zones" class="mobile-nav-link">Floor Zones <i class="fas fa-chevron-right"></i></a>
+            <a href="#muscle-guide" class="mobile-nav-link">Muscle Guide <i class="fas fa-chevron-right"></i></a>
+            <a href="#body-calculator" class="mobile-nav-link">Body Engine <i class="fas fa-chevron-right"></i></a>
+            <a href="#timetable" class="mobile-nav-link">Class Timetable <i class="fas fa-chevron-right"></i></a>
+            <a href="#transformations" class="mobile-nav-link">Member Transformations <i class="fas fa-chevron-right"></i></a>
+            <a href="#memberships" class="mobile-nav-link">Pricing & Memberships <i class="fas fa-chevron-right"></i></a>
+            <a href="#location" class="mobile-nav-link">Contact & Directions <i class="fas fa-chevron-right"></i></a>
+            <button class="btn btn-primary open-pass-modal-btn" style="width: 100%; margin-top: 10px;">
+                <i class="fas fa-bolt"></i> Claim Free 1-Day Pass
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+             Hero Section with Particle Sparks & Live Energy
+             ========================================================================== -->
+        <section class="hero-section" id="home">
+            <canvas id="hero-canvas"></canvas>
+
+            <div class="container hero-grid">
+                <div class="hero-text-col">
+                    <div class="hero-badge-tag">
+                        <i class="fas fa-crown"></i> Kitwe's Premier Temple of Strength
+                    </div>
+
+                    <h1 class="hero-title">
+                        FORGE YOUR <br>
+                        <span class="gradient-gold">ULTIMATE BODY</span> <br>
+                        IN COPPERBELT.
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Stop wishing, start conquering. Siya Fitness Gym on Kanwe Avenue combines heavy Olympic iron, high-octane cardio circuits, combat boxing, and certified coaches to sculpt your strongest physique yet.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <button class="btn btn-primary open-pass-modal-btn">
+                            <i class="fas fa-ticket-alt"></i> Claim 1-Day Free Pass
+                        </button>
+                        <a href="https://wa.me/260969919764?text=Hello%20Siya%20Fitness%20Gym%2C%20I%20am%20ready%20to%20start%20my%20fitness%20journey%20in%20Kitwe." 
+                           target="_blank" rel="noopener" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Enquiry
+                        </a>
+                    </div>
+
+                    <div class="hero-status-pill">
+                        <span class="pulse-dot"></span>
+                        <span id="hero-live-status">Gym Floor Active Now · Welcoming Athletes Today</span>
+                    </div>
+
+                    <!-- Live Stats Counters -->
+                    <div class="hero-stats-row">
+                        <div class="stat-box">
+                            <span class="stat-number">4.5 <i class="fas fa-star" style="color: var(--accent-gold); font-size: 1.3rem;"></i></span>
+                            <span class="stat-label">Kitwe Google Rating</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">1,200+</span>
+                            <span class="stat-label">Transformed Members</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Heavy Iron Stations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Media Showcase -->
+                <div class="hero-visual-card">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Siya Fitness Gym Kitwe Equipment Floor" loading="eager">
+                        <div class="hero-overlay-badge">
+                            <div class="hero-badge-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div>
+                                <div class="hero-badge-title">Zero Excuses Floor Policy</div>
+                                <div class="hero-badge-sub">Kanwe Ave, Chimwemwe, Kitwe</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Continuous Gliding Athletic Ticker Tape
+             ========================================================================== -->
+        <div class="ticker-tape-wrap" aria-hidden="true">
+            <div class="ticker-content">
+                <span class="ticker-item"><i class="fas fa-bolt"></i> KITWE'S #1 ELITE GYM</span>
+                <span class="ticker-item"><i class="fas fa-dumbbell"></i> 50KG DUMBBELL ARSENAL</span>
+                <span class="ticker-item"><i class="fas fa-fire"></i> HIGH-INTENSITY HIIT BOOTCAMPS</span>
+                <span class="ticker-item"><i class="fas fa-shield-alt"></i> OLYMPIC DEADLIFT PLATFORMS</span>
+                <span class="ticker-item"><i class="fas fa-boxing-glove"></i> COMBAT & BOXING ARENA</span>
+                <span class="ticker-item"><i class="fas fa-heartbeat"></i> CARDIO FLIGHT DECK</span>
+                <span class="ticker-item"><i class="fas fa-trophy"></i> CERTIFIED PERSONAL COACHES</span>
+                <span class="ticker-item"><i class="fas fa-bolt"></i> KITWE'S #1 ELITE GYM</span>
+                <span class="ticker-item"><i class="fas fa-dumbbell"></i> 50KG DUMBBELL ARSENAL</span>
+                <span class="ticker-item"><i class="fas fa-fire"></i> HIGH-INTENSITY HIIT BOOTCAMPS</span>
+                <span class="ticker-item"><i class="fas fa-shield-alt"></i> OLYMPIC DEADLIFT PLATFORMS</span>
+                <span class="ticker-item"><i class="fas fa-boxing-glove"></i> COMBAT & BOXING ARENA</span>
+            </div>
+        </div>
+
+        <!-- ==========================================================================
+             Floor Zones & Equipment Experience (Virtual Floor Tour)
+             ========================================================================== -->
+        <section class="section section-alt" id="zones">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow"><i class="fas fa-th-large"></i> Facility Tour</span>
+                    <h2 class="section-title">THE 5 ZONES OF <span class="gradient-gold">UNSTOPPABLE POWER</span></h2>
+                    <p class="section-desc">
+                        Every square meter at Siya Fitness Gym is engineered for maximum performance, ergonomic safety, and progressive overload.
+                    </p>
+                </div>
+
+                <div class="zones-grid">
+                    <!-- Zone 1 -->
+                    <div class="zone-card">
+                        <div class="zone-thumb-wrap">
+                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=80" alt="Iron Dungeon Zone">
+                            <span class="zone-badge-level">Heavy Iron</span>
+                        </div>
+                        <div class="zone-content">
+                            <h3 class="zone-title">The Iron Dungeon</h3>
+                            <p class="zone-desc">Dedicated to serious heavy lifters. Solid rubber hex dumbbells up to 50kg, competition Olympic power racks, and sound-absorbing deadlift platforms.</p>
+                            <ul class="zone-specs">
+                                <li><i class="fas fa-check"></i> Olympic Competition Benches</li>
+                                <li><i class="fas fa-check"></i> Texas Power Barbells & Bumper Plates</li>
+                                <li><i class="fas fa-check"></i> Chalk-Friendly Heavy Lifting Area</li>
+                            </ul>
+                            <a href="#memberships" class="btn btn-outline btn-xs">View Memberships</a>
+                        </div>
+                    </div>
+
+                    <!-- Zone 2 -->
+                    <div class="zone-card">
+                        <div class="zone-thumb-wrap">
+                            <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=700&q=80" alt="Cardio Flight Deck">
+                            <span class="zone-badge-level">Cardio Flight</span>
+                        </div>
+                        <div class="zone-content">
+                            <h3 class="zone-title">Cardio Flight Deck</h3>
+                            <p class="zone-desc">High-tech endurance and fat incineration. Equipped with commercial touchscreen treadmills, Concept2 rowing ergometers, and brutal Assault AirBikes.</p>
+                            <ul class="zone-specs">
+                                <li><i class="fas fa-check"></i> Incline Mountain Sprint Treadmills</li>
+                                <li><i class="fas fa-check"></i> Concept2 Rowers & AirBikes</li>
+                                <li><i class="fas fa-check"></i> Heart Rate Tracking Integration</li>
+                            </ul>
+                            <a href="#timetable" class="btn btn-outline btn-xs">See Spin & Cardio Times</a>
+                        </div>
+                    </div>
+
+                    <!-- Zone 3 -->
+                    <div class="zone-card">
+                        <div class="zone-thumb-wrap">
+                            <img src="https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=700&q=80" alt="Combat & Functional Arena">
+                            <span class="zone-badge-level">Agility & Combat</span>
+                        </div>
+                        <div class="zone-content">
+                            <h3 class="zone-title">Combat & Functional Arena</h3>
+                            <p class="zone-desc">Unleash your inner warrior. High-density turf track for sled pushes, 6-foot heavy boxing bags, battle ropes, and plyometric jump boxes.</p>
+                            <ul class="zone-specs">
+                                <li><i class="fas fa-check"></i> Heavy Punch & Kick Bags</li>
+                                <li><i class="fas fa-check"></i> 20-Meter Sled Push Turf Track</li>
+                                <li><i class="fas fa-check"></i> Battle Ropes & Kettlebell Stacks</li>
+                            </ul>
+                            <a href="#timetable" class="btn btn-outline btn-xs">Explore Boxing Schedule</a>
+                        </div>
+                    </div>
+
+                    <!-- Zone 4 -->
+                    <div class="zone-card">
+                        <div class="zone-thumb-wrap">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=80" alt="Plate Loaded Citadel">
+                            <span class="zone-badge-level">Hypertrophy</span>
+                        </div>
+                        <div class="zone-content">
+                            <h3 class="zone-title">Plate-Loaded Citadel</h3>
+                            <p class="zone-desc">Pinpoint muscle isolation and safe maximum overload. ISO-lateral chest presses, 45-degree leg press sleds, hack squats, and multi-angle cable towers.</p>
+                            <ul class="zone-specs">
+                                <li><i class="fas fa-check"></i> Dual Cable Crossover Towers</li>
+                                <li><i class="fas fa-check"></i> 600kg Rated 45° Leg Press</li>
+                                <li><i class="fas fa-check"></i> Adjustable Preacher Curls & Pec Decks</li>
+                            </ul>
+                            <a href="#muscle-guide" class="btn btn-outline btn-xs">Targeted Muscle Guide</a>
+                        </div>
+                    </div>
+
+                    <!-- Zone 5 -->
+                    <div class="zone-card">
+                        <div class="zone-thumb-wrap">
+                            <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=700&q=80" alt="Recovery & Nutrition Bar">
+                            <span class="zone-badge-level">Nutrition & Rest</span>
+                        </div>
+                        <div class="zone-content">
+                            <h3 class="zone-title">Recovery & Shake Bar</h3>
+                            <p class="zone-desc">Refuel like a champion right after your set. High-protein whey shakes, iced pre-workout shots, BCAAs, secure lockers, and hot rain showers.</p>
+                            <ul class="zone-specs">
+                                <li><i class="fas fa-check"></i> Ice-Cold Protein & Electrolyte Bar</li>
+                                <li><i class="fas fa-check"></i> Individual Secure Digital Lockers</li>
+                                <li><i class="fas fa-check"></i> Hot Showers & Fresh Towel Service</li>
+                            </ul>
+                            <a href="#location" class="btn btn-outline btn-xs">Visit Our Facility</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Interactive Muscle Anatomy & Training Protocol Explorer
+             ========================================================================== -->
+        <section class="section" id="muscle-guide">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow"><i class="fas fa-brain"></i> Interactive Training Guide</span>
+                    <h2 class="section-title">TARGET YOUR <span class="gradient-lime">ANATOMY</span></h2>
+                    <p class="section-desc">
+                        Select any muscle group to preview optimal compound exercises, specific machinery available at our Kitwe gym, and Coach Siya’s personal lifting cue.
+                    </p>
+                </div>
+
+                <div class="muscle-explorer-grid">
+                    <!-- Left Nav Buttons -->
+                    <div class="muscle-nav-list" role="tablist">
+                        <button class="muscle-btn active" data-muscle="chest">
+                            <div class="muscle-btn-icon"><i class="fas fa-hand-holding"></i></div>
+                            <div>Chest & Push Arsenal</div>
+                        </button>
+                        <button class="muscle-btn" data-muscle="back">
+                            <div class="muscle-btn-icon"><i class="fas fa-feather-alt"></i></div>
+                            <div>Back, Lats & Spine</div>
+                        </button>
+                        <button class="muscle-btn" data-muscle="legs">
+                            <div class="muscle-btn-icon"><i class="fas fa-running"></i></div>
+                            <div>Legs, Quads & Glutes</div>
+                        </button>
+                        <button class="muscle-btn" data-muscle="shoulders">
+                            <div class="muscle-btn-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div>Shoulders & Traps</div>
+                        </button>
+                        <button class="muscle-btn" data-muscle="arms">
+                            <div class="muscle-btn-icon"><i class="fas fa-fist-raised"></i></div>
+                            <div>Biceps & Triceps</div>
+                        </button>
+                        <button class="muscle-btn" data-muscle="core">
+                            <div class="muscle-btn-icon"><i class="fas fa-fire"></i></div>
+                            <div>Core & Abdominals</div>
+                        </button>
+                        <button class="muscle-btn" data-muscle="cardio">
+                            <div class="muscle-btn-icon"><i class="fas fa-heartbeat"></i></div>
+                            <div>Cardio & Conditioning</div>
+                        </button>
+                    </div>
+
+                    <!-- Right Dynamic Card -->
+                    <div class="muscle-display-card" id="muscle-display-card">
+                        <!-- Rendered dynamically by app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Interactive Smart Body & Macro Engine (Scientific Kitwe Body Engine)
+             ========================================================================== -->
+        <section class="section section-alt" id="body-calculator">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow"><i class="fas fa-calculator"></i> Precision Sports Science</span>
+                    <h2 class="section-title">CALCULATE YOUR <span class="gradient-gold">DAILY BLUEPRINT</span></h2>
+                    <p class="section-desc">
+                        No guesswork. Input your stats to receive your custom daily calorie budget, exact macronutrient split, and a 7-day training schedule built for Siya Gym.
+                    </p>
+                </div>
+
+                <div class="calc-wrapper">
+                    <div class="calc-grid">
+                        <!-- Left: Form Input -->
+                        <form id="fitness-calc-form" class="calc-form-col">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="calc-gender">Biological Sex</label>
+                                    <select id="calc-gender" name="gender" class="form-control">
+                                        <option value="male" selected>Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="calc-age">Age (Years)</label>
+                                    <input type="number" id="calc-age" name="age" class="form-control" value="26" min="14" max="85" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="calc-height">Height (cm)</label>
+                                    <input type="number" id="calc-height" name="height" class="form-control" value="178" min="120" max="230" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="calc-weight">Weight (kg)</label>
+                                    <input type="number" id="calc-weight" name="weight" class="form-control" value="78" min="35" max="250" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="calc-activity">Weekly Activity Level</label>
+                                <select id="calc-activity" name="activity" class="form-control">
+                                    <option value="sedentary">Sedentary (Desk Job, little exercise)</option>
+                                    <option value="light">Lightly Active (1-2 days/week)</option>
+                                    <option value="moderate" selected>Moderately Active (3-5 gym sessions/week)</option>
+                                    <option value="very">Very Active (6-7 days heavy lifting/athletics)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="calc-goal">Primary Fitness Objective</label>
+                                <select id="calc-goal" name="goal" class="form-control">
+                                    <option value="fat_loss" selected>⚡ Rapid Shred & Fat Loss (-20% Deficit)</option>
+                                    <option value="muscle_gain">🦾 Clean Hypertrophy Bulk (+12% Surplus)</option>
+                                    <option value="strength">🏋️ Raw Power & Strength (+5% Energy)</option>
+                                    <option value="recomp">⚖️ Body Recomposition (Maintenance)</option>
+                                    <option value="endurance">🥊 Athletic Conditioning & Agility</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">
+                                <i class="fas fa-bolt"></i> Generate My Custom Protocol
+                            </button>
+                        </form>
+
+                        <!-- Right: Output Card -->
+                        <div class="calc-results-col">
+                            <div id="calc-empty-state" class="calc-empty-placeholder">
+                                <i class="fas fa-heartbeat calc-empty-icon"></i>
+                                <h3>Your Protocol Awaits</h3>
+                                <p>Fill in your parameters on the left and click "Generate" to view your scientific calorie breakdown, macros, and workout split.</p>
+                            </div>
+
+                            <div id="calc-results" style="display: none;">
+                                <div class="results-headline-box">
+                                    <div>
+                                        <div class="target-cals-num" id="res-target-cals">2,350</div>
+                                        <div class="target-cals-unit">Daily Calorie Target (kcal)</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="font-size: 1.4rem; font-weight: 800;" id="res-bmi">24.6</div>
+                                        <div style="font-size: 0.8rem; font-weight: 700;" id="res-bmi-cat">Optimal Range</div>
+                                    </div>
+                                </div>
+
+                                <div class="macro-cards-row">
+                                    <div class="macro-card">
+                                        <div class="macro-val" id="res-protein">172g</div>
+                                        <div class="macro-lbl">Protein</div>
+                                    </div>
+                                    <div class="macro-card">
+                                        <div class="macro-val" id="res-carbs">230g</div>
+                                        <div class="macro-lbl">Carbs</div>
+                                    </div>
+                                    <div class="macro-card">
+                                        <div class="macro-val" id="res-fat">65g</div>
+                                        <div class="macro-lbl">Healthy Fats</div>
+                                    </div>
+                                    <div class="macro-card">
+                                        <div class="macro-val" id="res-water">3.4 L</div>
+                                        <div class="macro-lbl">Water / Day</div>
+                                    </div>
+                                </div>
+
+                                <div style="margin-bottom: 16px;">
+                                    <strong id="res-goal-title" style="color: var(--accent-gold); font-size: 0.95rem;">Rapid Shred</strong>
+                                    <p id="res-goal-desc" style="font-size: 0.85rem; color: var(--text-lead); margin-top: 4px;"></p>
+                                </div>
+
+                                <div class="routine-schedule-wrap">
+                                    <h4><i class="fas fa-calendar-check"></i> 7-Day Siya Gym Split</h4>
+                                    <div id="res-routine-list">
+                                        <!-- Populated dynamically -->
+                                    </div>
+                                </div>
+
+                                <a href="#" id="wa-calc-consult-btn" target="_blank" class="btn btn-whatsapp btn-sm" style="width: 100%; margin-top: 20px;">
+                                    <i class="fab fa-whatsapp"></i> Send This Plan to Coach Siya
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Interactive Before & After Member Transformation
+             ========================================================================== -->
+        <section class="section transformation-section" id="transformations">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow"><i class="fas fa-trophy"></i> Proof of Work</span>
+                    <h2 class="section-title">REAL PEOPLE. <span class="gradient-gold">SAVAGE RESULTS.</span></h2>
+                    <p class="section-desc">
+                        Drag the comparison handle to reveal how regular Kitwe residents turned their physical health and confidence into an unstoppable powerhouse.
+                    </p>
+                </div>
+
+                <div class="transformation-layout">
+                    <!-- Comparison Draggable Slider -->
+                    <div class="comparison-container" title="Drag left and right to compare">
+                        <div class="comparison-before" style="background-image: url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80');">
+                            <span class="comp-label before">Before Training</span>
+                        </div>
+                        <div class="comparison-after" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80');">
+                            <span class="comp-label after">5 Months at Siya</span>
+                        </div>
+                        <div class="comparison-handle">
+                            <div class="handle-grip"><i class="fas fa-arrows-alt-h"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Quote -->
+                    <div class="transformation-quote-card">
+                        <p class="transformation-quote">
+                            "Before Siya Fitness Gym, I struggled with low energy, extra weight, and zero gym confidence. The coaching team on Kanwe Avenue pushed me every single morning. In 20 weeks, I lost 21kg of body fat, dropped 4 pant sizes, and hit a 180kg deadlift. This gym changed my life."
+                        </p>
+                        <div class="member-profile-meta">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Mwila K. Athlete" class="member-avatar">
+                            <div>
+                                <div class="member-name">Mwila K.</div>
+                                <div class="member-stats-tag"><i class="fas fa-check-circle"></i> Lost 21kg · Kitwe Resident · Member since 2024</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 28px;">
+                            <button class="btn btn-primary btn-sm open-pass-modal-btn">
+                                <i class="fas fa-bolt"></i> Start Your Transformation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Interactive Live Class Timetable
+             ========================================================================== -->
+        <section class="section section-alt" id="timetable">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow"><i class="fas fa-calendar-alt"></i> Weekly Schedule</span>
+                    <h2 class="section-title">HIGH-VOLTAGE <span class="gradient-gold">GROUP CLASSES</span></h2>
+                    <p class="section-desc">
+                        Train alongside Kitwe’s hardest workers. Choose your day to view schedule slots, instructors, intensity ratings, and live spot availability.
+                    </p>
+                </div>
+
+                <!-- Day Selector Tabs -->
+                <div class="schedule-tabs-row" role="tablist">
+                    <button class="schedule-tab-btn active" data-day="mon">Monday</button>
+                    <button class="schedule-tab-btn" data-day="tue">Tuesday</button>
+                    <button class="schedule-tab-btn" data-day="wed">Wednesday</button>
+                    <button class="schedule-tab-btn" data-day="thu">Thursday</button>
+                    <button class="schedule-tab-btn" data-day="fri">Friday</button>
+                    <button class="schedule-tab-btn" data-day="sat">Saturday</button>
+                </div>
+
+                <!-- Schedule Card Grid -->
+                <div class="schedule-grid" id="schedule-grid">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Membership Pricing Matrix (ZMK Kwacha)
+             ========================================================================== -->
+        <section class="section" id="memberships">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow"><i class="fas fa-tag"></i> Transparent Pricing</span>
+                    <h2 class="section-title">INVEST IN YOUR <span class="gradient-gold">STRONGEST ASSET</span></h2>
+                    <p class="section-desc">
+                        No hidden sign-up fees. No complicated contracts. Straightforward access in Zambian Kwacha (K) tailored for your routine.
+                    </p>
+
+                    <!-- Billing Toggle -->
+                    <div class="pricing-toggle-wrap">
+                        <button class="pricing-toggle-btn active" data-cycle="month">Monthly</button>
+                        <button class="pricing-toggle-btn" data-cycle="quarter">Quarterly (Save 15%)</button>
+                        <button class="pricing-toggle-btn" data-cycle="year">Annual VIP (Save 35%)</button>
+                    </div>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Tier 1: Iron Starter -->
+                    <div class="pricing-card">
+                        <h3 class="plan-name">Iron Starter</h3>
+                        <p class="plan-subtitle">Perfect for independent lifters seeking unlimited floor and machine access.</p>
+                        <div class="price-box">
+                            <span class="price-val" id="price-starter">K450</span>
+                            <div class="price-period">/ month</div>
+                            <span class="savings-callout"></span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Unlimited Gym Floor & Free Weights</li>
+                            <li><i class="fas fa-check"></i> Full Cardio Flight Deck Access</li>
+                            <li><i class="fas fa-check"></i> Secure Locker & Shower Access</li>
+                            <li><i class="fas fa-check"></i> Standard Operating Hours Access</li>
+                            <li class="dimmed"><i class="fas fa-times"></i> Group Classes Not Included</li>
+                            <li class="dimmed"><i class="fas fa-times"></i> 1-on-1 Personal Trainer</li>
+                        </ul>
+                        <a href="https://wa.me/260969919764?text=Hello%20Siya%20Gym!%20I%20want%20to%20register%20for%20the%20Iron%20Starter%20Plan%20(K450)." 
+                           target="_blank" class="btn btn-outline">
+                            Join Iron Starter
+                        </a>
+                    </div>
+
+                    <!-- Tier 2: Black Elite VIP (Featured) -->
+                    <div class="pricing-card featured">
+                        <span class="popular-badge">MOST POPULAR CHOICE</span>
+                        <h3 class="plan-name">Black Elite VIP</h3>
+                        <p class="plan-subtitle">The ultimate complete package. All classes, priority booking, and recovery lounge perks.</p>
+                        <div class="price-box">
+                            <span class="price-val" id="price-vip">K750</span>
+                            <div class="price-period">/ month</div>
+                            <span class="savings-callout"></span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> <strong>Unlimited Access to ALL Group Classes</strong></li>
+                            <li><i class="fas fa-check"></i> Full Floor, Free Weights & Boxing Arena</li>
+                            <li><i class="fas fa-check"></i> 1 Free Monthly Guest Pass for a Friend</li>
+                            <li><i class="fas fa-check"></i> 15% Discount at Recovery Shake Bar</li>
+                            <li><i class="fas fa-check"></i> Free Body Composition Scan Every Month</li>
+                            <li><i class="fas fa-check"></i> Priority Locker Room & Towel Service</li>
+                        </ul>
+                        <a href="https://wa.me/260969919764?text=Hello%20Siya%20Gym!%20I%20want%20to%20register%20for%20the%20Black%20Elite%20VIP%20Plan%20(K750)." 
+                           target="_blank" class="btn btn-primary">
+                            Claim Black Elite VIP
+                        </a>
+                    </div>
+
+                    <!-- Tier 3: Personal Training Pro -->
+                    <div class="pricing-card">
+                        <h3 class="plan-name">Personal Training Pro</h3>
+                        <p class="plan-subtitle">Fast-track your results with dedicated 1-on-1 coaching and custom meal planning.</p>
+                        <div class="price-box">
+                            <span class="price-val" id="price-pro">K1,450</span>
+                            <div class="price-period">/ month</div>
+                            <span class="savings-callout"></span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> <strong>12 Dedicated 1-on-1 Coaching Sessions</strong></li>
+                            <li><i class="fas fa-check"></i> Custom Nutrition & Macro Protocol</li>
+                            <li><i class="fas fa-check"></i> Bi-Weekly Body Fat & Caliper Scans</li>
+                            <li><i class="fas fa-check"></i> 24/7 Direct WhatsApp Coach Support</li>
+                            <li><i class="fas fa-check"></i> Full VIP Facility & Class Access</li>
+                            <li><i class="fas fa-check"></i> Form Correction & Injury Prevention</li>
+                        </ul>
+                        <a href="https://wa.me/260969919764?text=Hello%20Siya%20Gym!%20I%20am%20interested%20in%20Personal%20Training%20Pro%20Coaching%20(K1450)." 
+                           target="_blank" class="btn btn-outline">
+                            Book Personal Trainer
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Single Day Drop-In Option -->
+                <div style="text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.95rem;">
+                    Just visiting Kitwe or want to try one session? 
+                    <a href="https://wa.me/260969919764?text=Hello%20Siya%20Gym!%20I%20want%20to%20purchase%20a%20Day%20Pass%20(K80)." 
+                       style="color: var(--accent-gold); font-weight: 700; text-decoration: underline; margin-left: 6px;">
+                        Get a Single Day Pass for K80 →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Kitwe Certified Coaches Showcase
+             ========================================================================== -->
+        <section class="section section-alt" id="coaches">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow"><i class="fas fa-medal"></i> Master Trainers</span>
+                    <h2 class="section-title">THE LEADERS OF <span class="gradient-gold">YOUR TRIBE</span></h2>
+                    <p class="section-desc">
+                        Our coaches don't just count reps—they coach movement mechanics, elevate your mental resilience, and ensure you leave stronger than you walked in.
+                    </p>
+                </div>
+
+                <div class="trainers-grid">
+                    <!-- Coach 1 -->
+                    <div class="trainer-card">
+                        <div class="trainer-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80" alt="Head Coach Siya">
+                        </div>
+                        <div class="trainer-details">
+                            <h3 class="trainer-name">Head Coach Siya</h3>
+                            <div class="trainer-specialty">Master Strength Coach & Bodybuilding Pro</div>
+                            <p class="trainer-bio">12+ years shaping athletes in the Copperbelt. Specializes in heavy barbell compound lifts, biomechanics, and rapid muscular hypertrophy.</p>
+                            <a href="https://wa.me/260969919764?text=Hello%20Coach%20Siya!%20I%20would%20like%20to%20inquire%20about%20your%20personal%20training%20availability." 
+                               target="_blank" class="btn btn-outline btn-xs" style="width: 100%;">
+                                <i class="fab fa-whatsapp"></i> Book with Coach Siya
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Coach 2 -->
+                    <div class="trainer-card">
+                        <div class="trainer-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Coach Thandiwe">
+                        </div>
+                        <div class="trainer-details">
+                            <h3 class="trainer-name">Coach Thandiwe</h3>
+                            <div class="trainer-specialty">Women's Hypertrophy & Nutrition Specialist</div>
+                            <p class="trainer-bio">Empowering Kitwe women to build strength, sculpt glutes and core, and foster lifelong metabolic vitality through sustainable nutrition.</p>
+                            <a href="https://wa.me/260969919764?text=Hello%20Coach%20Thandiwe!%20I%20would%20like%20to%20join%20your%20women's%20training%20sessions." 
+                               target="_blank" class="btn btn-outline btn-xs" style="width: 100%;">
+                                <i class="fab fa-whatsapp"></i> Book with Coach Thandiwe
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Coach 3 -->
+                    <div class="trainer-card">
+                        <div class="trainer-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Coach Kalenga">
+                        </div>
+                        <div class="trainer-details">
+                            <h3 class="trainer-name">Coach Kalenga</h3>
+                            <div class="trainer-specialty">Boxing, Combat Agility & HIIT Specialist</div>
+                            <p class="trainer-bio">Former regional boxer bringing high-octane pad work, heavy bag combinations, and rapid cardiovascular fat incineration to every session.</p>
+                            <a href="https://wa.me/260969919764?text=Hello%20Coach%20Kalenga!%20I%20want%20to%20join%20the%20Boxing%20Bootcamp%20at%20Siya%20Gym." 
+                               target="_blank" class="btn btn-outline btn-xs" style="width: 100%;">
+                                <i class="fab fa-whatsapp"></i> Book with Coach Kalenga
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Kitwe Location & Contact Concierge
+             ========================================================================== -->
+        <section class="section" id="location">
+            <div class="container">
+                <div class="location-grid">
+                    <!-- Left: Contact Details -->
+                    <div class="location-info-col">
+                        <div>
+                            <span class="section-eyebrow"><i class="fas fa-map-pin"></i> Kitwe, Copperbelt</span>
+                            <h2 class="section-title">FIND SIYA <span class="gradient-gold">FITNESS GYM</span></h2>
+                            <p class="section-desc" style="margin-bottom: 24px;">
+                                Conveniently located in Chimwemwe, Kitwe with ample secure parking and quick access from Katilungu & Kanwe Avenue.
+                            </p>
+                        </div>
+
+                        <div class="contact-meta-list">
+                            <div class="meta-item">
+                                <div class="meta-icon-box"><i class="fas fa-location-arrow"></i></div>
+                                <div>
+                                    <h4>Physical Address</h4>
+                                    <p>6694+PH9, Kanwe Ave (Katilungu Ave), Chimwemwe, Kitwe, Zambia</p>
+                                </div>
+                            </div>
+
+                            <div class="meta-item">
+                                <div class="meta-icon-box"><i class="fab fa-whatsapp"></i></div>
+                                <div>
+                                    <h4>Direct WhatsApp & Calls</h4>
+                                    <p><a href="tel:+260969919764">+260 96 991 9764</a></p>
+                                </div>
+                            </div>
+
+                            <div class="meta-item">
+                                <div class="meta-icon-box"><i class="far fa-clock"></i></div>
+                                <div>
+                                    <h4>Operating Hours</h4>
+                                    <p><strong>Monday – Friday:</strong> 05:30 AM – 21:00 PM</p>
+                                    <p><strong>Saturday:</strong> 06:00 AM – 19:00 PM</p>
+                                    <p><strong>Sunday:</strong> 08:00 AM – 14:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
+                            <a href="https://wa.me/260969919764?text=Hello%20Siya%20Fitness%20Gym%2C%20I%20am%20on%20my%20way%20to%20visit%20the%20gym." 
+                               target="_blank" rel="noopener" class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> WhatsApp Us Now
+                            </a>
+                            <a href="https://www.google.com/search?q=Siya+Fitness+Gym+Kitwe+Zambia" 
+                               target="_blank" rel="noopener" class="btn btn-outline">
+                                <i class="fas fa-directions"></i> Google Maps Directions
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Map / Direction View -->
+                    <div class="location-map-col">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15444.646842823616!2d28.2045!3d-12.7915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x196353d2d95b5c93%3A0x6e9f280a9699!2sKitwe%2C%20Zambia!5e0!3m2!1sen!2szm!4v1700000000000!5m2!1sen!2szm" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Siya Fitness Gym Kitwe Location Map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Frequently Asked Questions
+             ========================================================================== -->
+        <section class="section section-alt" id="faq">
+            <div class="container" style="max-width: 900px;">
+                <div class="section-header-center">
+                    <span class="section-eyebrow"><i class="fas fa-question-circle"></i> Got Questions?</span>
+                    <h2 class="section-title">COMMON <span class="gradient-gold">INQUIRIES</span></h2>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <details style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 20px;">
+                        <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer; color: var(--text-white);">
+                            What should I bring on my first day at Siya Fitness Gym?
+                        </summary>
+                        <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6;">
+                            Bring clean workout shoes, a small sweat towel, a water bottle, and comfortable athletic clothing. You can store your belongings in our secure lockers.
+                        </p>
+                    </details>
+
+                    <details style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 20px;">
+                        <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer; color: var(--text-white);">
+                            Are beginner lifters welcome at Siya Gym?
+                        </summary>
+                        <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6;">
+                            Absolutely! Over 40% of our members started with zero gym experience. Our floor coaches will gladly walk you through machine setups and show you proper barbell form.
+                        </p>
+                    </details>
+
+                    <details style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 20px;">
+                        <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer; color: var(--text-white);">
+                            Do you have secure parking at Kanwe Avenue?
+                        </summary>
+                        <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6;">
+                            Yes, we have dedicated on-site parking with full-time security guards stationed during all operational hours for complete peace of mind.
+                        </p>
+                    </details>
+
+                    <details style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 20px;">
+                        <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer; color: var(--text-white);">
+                            How can I claim my free 1-Day VIP Pass?
+                        </summary>
+                        <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6;">
+                            Simply click the "Free 1-Day Pass" button on this website, enter your name, and a unique holographic digital pass will be generated for you to present at our front desk!
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         VIP Holographic Digital Pass Generator Modal
+         ========================================================================== -->
+    <div id="pass-modal" class="pass-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="pass-modal-card">
+            <button id="close-pass-modal" class="close-modal-btn" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- View 1: Form Generator -->
+            <div id="pass-form-view">
+                <span class="section-eyebrow"><i class="fas fa-crown"></i> Exclusive Guest Access</span>
+                <h3 id="modal-title" style="font-size: 1.7rem; margin-bottom: 8px;">CLAIM YOUR <span class="gradient-gold">1-DAY VIP PASS</span></h3>
+                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 24px;">
+                    Test drive Kitwe’s top strength facility for 24 hours. Full access to heavy weights, cardio, and lockers.
+                </p>
+
+                <form id="pass-gen-form" style="display: flex; flex-direction: column; gap: 16px;">
+                    <div class="form-group">
+                        <label for="pass-name">Full Name</label>
+                        <input type="text" id="pass-name" class="form-control" placeholder="e.g. Chileshe Mwamba" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass-phone">WhatsApp Number</label>
+                        <input type="tel" id="pass-phone" class="form-control" placeholder="e.g. +260 96 991 9764" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass-goal">Primary Goal</label>
+                        <select id="pass-goal" class="form-control">
+                            <option value="Rapid Fat Loss & Conditioning">Rapid Fat Loss & Conditioning</option>
+                            <option value="Muscle Hypertrophy & Bulk">Muscle Hypertrophy & Bulk</option>
+                            <option value="Powerlifting & Compound Lifts">Powerlifting & Compound Lifts</option>
+                            <option value="Boxing & Combat Training">Boxing & Combat Training</option>
+                            <option value="General Health & Vitality">General Health & Vitality</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%;">
+                        <i class="fas fa-qrcode"></i> Generate My VIP Pass
+                    </button>
+                </form>
+            </div>
+
+            <!-- View 2: Generated Holographic Pass -->
+            <div id="pass-result-view" class="digital-ticket-view">
+                <span class="section-eyebrow"><i class="fas fa-check-circle"></i> Pass Activated</span>
+                <h3 style="font-size: 1.6rem; margin-bottom: 4px;">YOUR VIP PASS IS READY!</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Show this pass on your phone to our receptionist at Kanwe Avenue.</p>
+
+                <div class="hologram-ticket">
+                    <div class="ticket-header">
+                        <div class="ticket-brand">SIYA FITNESS GYM</div>
+                        <div class="ticket-badge">1-DAY VIP PASS</div>
+                    </div>
+
+                    <div class="ticket-body-grid">
+                        <div>
+                            <div class="t-field-label">Guest Athlete</div>
+                            <div class="t-field-val" id="ticket-name">Chileshe Mwamba</div>
+                        </div>
+                        <div>
+                            <div class="t-field-label">Valid Location</div>
+                            <div class="t-field-val">Kitwe, Zambia</div>
+                        </div>
+                        <div>
+                            <div class="t-field-label">Issue Date</div>
+                            <div class="t-field-val" id="ticket-date">Today</div>
+                        </div>
+                        <div>
+                            <div class="t-field-label">Target Focus</div>
+                            <div class="t-field-val" id="ticket-goal">HYPERTROPHY</div>
+                        </div>
+                    </div>
+
+                    <div class="ticket-barcode-wrap">
+                        <div class="barcode-lines">||| | | |||| | ||| | || |||</div>
+                        <div class="ticket-code-tag" id="ticket-code">SIYA-VIP-8492</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; flex-direction: column;">
+                    <a href="#" id="ticket-whatsapp-claim" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+                        <i class="fab fa-whatsapp"></i> Confirm Pass via WhatsApp
+                    </a>
+                    <button type="button" id="pass-reset-btn" class="btn btn-outline btn-sm">
+                        Generate Another Pass
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         Mobile Sticky Bottom Action Bar
+         ========================================================================== -->
+    <div class="mobile-bottom-bar" aria-label="Quick Actions">
+        <button class="btn btn-primary btn-sm open-pass-modal-btn">
+            <i class="fas fa-ticket-alt"></i> Free Pass
+        </button>
+        <a href="https://wa.me/260969919764?text=Hello%20Siya%20Fitness%20Gym%2C%20I%20would%20like%20to%20enquire%20about%20visiting." 
+           target="_blank" class="btn btn-whatsapp btn-sm">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="#location" class="btn btn-outline btn-sm">
+            <i class="fas fa-map-marker-alt"></i> Location
+        </a>
+    </div>
+
+    <!-- ==========================================================================
+         Footer
+         ========================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="site-brand" style="margin-bottom: 14px;">
+                        <div class="brand-icon-box"><i class="fas fa-dumbbell"></i></div>
+                        <div class="brand-text">
+                            <span class="brand-title">SIYA FITNESS</span>
+                            <span class="brand-sub">KITWE, ZAMBIA</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">
+                        The ultimate destination for physical and mental metamorphosis in the Copperbelt. High-performance strength equipment, functional training, and community.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#zones">Facility Zones</a></li>
+                        <li><a href="#muscle-guide">Muscle Explorer</a></li>
+                        <li><a href="#body-calculator">Body Composition Engine</a></li>
+                        <li><a href="#timetable">Class Timetable</a></li>
+                        <li><a href="#memberships">Membership Plans</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Operating Hours</h4>
+                    <ul class="footer-links" style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.8;">
+                        <li>Mon – Fri: 05:30 – 21:00</li>
+                        <li>Saturday: 06:00 – 19:00</li>
+                        <li>Sunday: 08:00 – 14:00</li>
+                        <li>Kanwe Ave, Chimwemwe, Kitwe</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Concierge</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+260969919764"><i class="fas fa-phone-alt" style="color: var(--accent-gold); margin-right: 6px;"></i> +260 96 991 9764</a></li>
+                        <li><a href="https://wa.me/260969919764"><i class="fab fa-whatsapp" style="color: #25D366; margin-right: 6px;"></i> Instant WhatsApp Chat</a></li>
+                        <li><a href="https://www.google.com/search?q=Siya+Fitness+Gym+Kitwe+Zambia" target="_blank"><i class="fas fa-map-marked-alt" style="color: var(--accent-lime); margin-right: 6px;"></i> Google Reviews & Maps</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Siya Fitness Gym · Kanwe Ave, Kitwe, Zambia. All Rights Reserved.</div>
+                <div>Engineered for Champions · Zero Excuses</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/audio.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
