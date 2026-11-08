@@ -616,7 +616,7 @@ function initMobileNav() {
     if (!toggle || !drawer) return;
 
     toggle.addEventListener('click', () => {
-        drawer.classList.toggle('active');
+        drawer.classList.toggle('open');
         toggle.classList.toggle('is-open');
         if (window.soundEngine) window.soundEngine.playClick();
     });
